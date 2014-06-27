@@ -24,6 +24,7 @@ def show(output):
 
 
 
+@profile
 def calculate_z_serial(q, maxiter, z):
     output = [0] * len(q)
     for i in range(len(q)):

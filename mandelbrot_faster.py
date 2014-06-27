@@ -24,7 +24,6 @@ def show(output):
 
 
 
-#@profile
 def calculate_z_serial(q, maxiter, z):
     output = [0] * len(q)
     for i in range(len(q)):
@@ -80,7 +79,7 @@ if __name__ == "__main__":
     # get width, height and max iterations from cmd line
     # 'python mandelbrot_pypy.py 1000 1000'
     if len(sys.argv) == 1:
-        w = h = 1000
+        w = h = 300
         maxiter = 1000
     else:
         w = int(sys.argv[1])
