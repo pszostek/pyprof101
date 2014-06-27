@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# sudo pip install gprof2dot
+# sudo apt-get install graphviz
+
+set -x
+python -m cProfile -o ./$1.pstats $*
+gprof2dot -f pstats ./$1.pstats -n 0 -e 0 | dot -Tpdf -o $1.profile.pdf
+evince $1.profile.pdf

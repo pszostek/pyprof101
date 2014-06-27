@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -x
+
+python -c "from dis import dis; from $1 import $2; dis($2)"

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# sudo pip install line_profiler
+
+set -x 
+kernprof.py --line-by-line $*
+python -m line_profiler $1.lprof
